@@ -21,4 +21,10 @@ describe('Game', function(){
     done();
   })
 
+  it('player X takes a go', function(){
+    game.takeGo(9)
+    game.takeGo(1)
+    expect(game.board).toEqual(['X', '', '', '', '', '', '', '', 'O'])
+    expect(game.turn).toEqual('O')
+  })
 })
