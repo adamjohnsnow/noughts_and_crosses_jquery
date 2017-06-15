@@ -1,5 +1,4 @@
 describe('jQuery feature testing', function(){
-  var fixture;
 
   beforeEach(function () {
     loadFixtures('noughtsAndCrosses.html');
@@ -10,10 +9,6 @@ describe('jQuery feature testing', function(){
   });
 
   describe('pressing the buttons', function(){
-
-    it('has game board button form', function(){
-      expect($('#takeGo')).toBeInDOM();
-    })
 
     it('has game board in DOM', function(){
       expect(window.game.board).toEqual(['', '', '', '', '', '', '', '', '']);
@@ -29,6 +24,11 @@ describe('jQuery feature testing', function(){
       expect($('#7')).toBeInDOM();
       expect($('#8')).toBeInDOM();
       expect($('#10')).not.toBeInDOM();
+    })
+
+    it('clicks a button', function(){
+      $('#1')[0].click();
+      expect(window.game.board[0]).toBe('O')
     })
   })
 })

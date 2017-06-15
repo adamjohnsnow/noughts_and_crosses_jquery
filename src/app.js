@@ -1,11 +1,11 @@
 var game = new Game();
 
-$(function () {
+$('.btn').click(function(number) {
+  game.takeGo(Number(number.target.id));
+  refreshGrid();
+})
 
-  $('#takeGo').click(function(number) {
-    game.takeGo(Number(number.target.id));
-    refreshGrid();
-  })
+$(function() {
 
   function refreshGrid() {
     $('#turn').html(game.turn + '\'s turn')
@@ -22,4 +22,4 @@ $(function () {
   }
 
   refreshGrid();
-})
+});
