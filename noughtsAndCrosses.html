@@ -3,11 +3,10 @@
   <head>
     <meta charset="utf-8"></meta>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="./lib/jquery-3.2.1.min.js"></script>
     <script src="./src/Game.js"></script>
     <script src="./src/app.js"></script>
     <script src="./src/checkWinner.js"></script>
-
     <title>O and X's</title>
   </head>
 
@@ -16,7 +15,7 @@
     <div id="turn"></div>
     <div id="winner"></div>
       <p>
-        <button class="btn" id="1">~</button>
+        <button class="btn" id=1>~</button>
         <button class="btn" id=2>~</button>
         <button class="btn" id=3>~</button>
       </p>
@@ -30,5 +29,9 @@
         <button class="btn" id=8>~</button>
         <button class="btn" id=9>~</button>
       </p>
+      <script>
+        var game = new Game();
+        establish();
+      </script>
   </body>
 </html>

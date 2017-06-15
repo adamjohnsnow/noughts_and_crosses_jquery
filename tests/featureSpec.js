@@ -4,10 +4,6 @@ describe('jQuery feature testing', function(){
     loadFixtures('noughtsAndCrosses.html');
   });
 
-  afterEach(function () {
-    $('#takeGo').remove();
-  });
-
   describe('pressing the buttons', function(){
 
     it('has game board in DOM', function(){
@@ -26,9 +22,14 @@ describe('jQuery feature testing', function(){
       expect($('#10')).not.toBeInDOM();
     })
 
-    it('clicks a button', function(){
+    it('clicks a button, next turn', function(){
       $('#1')[0].click();
-      expect(window.game.board[0]).toBe('O')
+      expect(window.game.turn).toBe('X')
+    })
+
+    it('clicks a button, turn recorded in board', function(){
+      $('#3')[0].click();
+      expect(window.game.board[2]).toBe('O')
     })
   })
 })
