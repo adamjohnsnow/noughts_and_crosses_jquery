@@ -1,5 +1,5 @@
 function CheckWinner(board, turn){
-  this.wins = [
+  var wins = [
     [0, 1, 2],
     [3, 4, 5],
     [6, 7, 8],
@@ -9,14 +9,14 @@ function CheckWinner(board, turn){
     [0, 4, 8],
     [2, 4, 6]
   ];
-  return evaluateBoard(board, turn, this.wins);
+  return evaluateBoard(board, turn, wins);
 }
 
 function evaluateBoard(board, turn, wins){
   var winningResult = [turn, turn, turn].toString();
   for (var combination in wins) {
     if (winningResult == selectResults(board, wins[combination])){
-      return true;
+      return turn;
     }
   }
 }

@@ -11,8 +11,7 @@ function takeGoClick(){
 }
 
 function refreshGrid() {
-  $('#turn').html(game.turn + '\'s turn')
-  $('#winner').html(game.winner)
+  $('#turn').html(result())
   $("#1").html(game.board[0])
   $("#2").html(game.board[1])
   $("#3").html(game.board[2])
@@ -22,4 +21,12 @@ function refreshGrid() {
   $("#7").html(game.board[6])
   $("#8").html(game.board[7])
   $("#9").html(game.board[8])
+}
+
+function result() {
+  if(game.winner){
+    return game.winner + ' WINS'
+  }else{
+    return game.turn + '\'s turn'
+  }
 }

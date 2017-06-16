@@ -22,6 +22,10 @@ describe('jQuery feature testing', function(){
       expect($('#10')).not.toBeInDOM();
     })
 
+    it('tells you who\'s turn it is', function(){
+      expect($('#turn')).toContainText('O\'s turn');
+    })
+    
     it('clicks a button, next turn', function(){
       $('#1').click();
       expect(window.game.turn).toBe('X')

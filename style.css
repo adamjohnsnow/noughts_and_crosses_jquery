@@ -1,0 +1,12 @@
+body {
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+}
+
+.btn {
+  height: 70px;
+  width: 70px;
+  background: white;
+  vertical-align: middle;
+  font-size: 20px;
+}
