@@ -57,5 +57,12 @@ describe('jQuery feature testing', function(){
       $('#8').click();
       expect($('#turn')).toContainText('DRAW');
     })
+
+    it('can restart game', function(){
+      $('#1').click();
+      $('#restart').click();
+      expect(window.game.board).toEqual(['', '', '', '', '', '', '', '', ''])
+      expect($('#turn')).toContainText('O\'s turn');
+    })
   })
 })

@@ -1,6 +1,8 @@
 body {
   font-family: 'Cabin', sans-serif;
   text-align: center;
+  color: white;
+  background-color: black;
 }
 
 .btn {

@@ -1,11 +1,15 @@
 function establish(){
   refreshGrid();
-  takeGoClick();
+  activateButtons();
 }
 
-function takeGoClick(){
+function activateButtons(){
   $('.btn').click(function(number) {
     game.takeGo(Number(number.target.id));
+    refreshGrid();
+  })
+  $('#restart').click(function(number) {
+    game = new Game();
     refreshGrid();
   })
 }
