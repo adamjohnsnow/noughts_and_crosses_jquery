@@ -10,7 +10,7 @@ open noughtsAndCrosses.html
 ```
 
 ## NOUGHTS & CROSSES
-<img width="370" alt="screen shot 2017-06-16 at 14 15 37" src="https://user-images.githubusercontent.com/24992029/27229301-ff5d70e0-52a2-11e7-8f0b-99915022ef17.png">
+<img width="300" alt="screen shot 2017-06-16 at 15 04 59" src="https://user-images.githubusercontent.com/24992029/27229884-374bb1a4-52a5-11e7-8a09-88fed6642b0c.png">
 The classic game of 'Noughts and Crosses' or 'Tic-Tac-Toe'.
 
 #### The rules
