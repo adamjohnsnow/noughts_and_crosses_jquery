@@ -5,7 +5,6 @@ function Game(){
 }
 
 Game.prototype.takeGo = function (cell) {
-  console.log(this.board)
   if (this.board[cell - 1] === '') { this.board[cell - 1] = this.turn }
   this.checkForWin()
   this.turn == 'O' ? this.turn = 'X' : this.turn = 'O'

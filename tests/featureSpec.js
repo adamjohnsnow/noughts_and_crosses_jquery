@@ -23,12 +23,12 @@ describe('jQuery feature testing', function(){
     })
 
     it('clicks a button, next turn', function(){
-      $('#1')[0].click();
+      $('#1').click();
       expect(window.game.turn).toBe('X')
     })
 
     it('clicks a button, turn recorded in board', function(){
-      $('#3')[0].click();
+      $('#3').click();
       expect(window.game.board[2]).toBe('O')
     })
   })
