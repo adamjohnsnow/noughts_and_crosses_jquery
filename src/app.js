@@ -24,9 +24,11 @@ function refreshGrid() {
 }
 
 function result() {
-  if(game.winner){
-    return game.winner + ' WINS'
-  }else{
+  if(!game.winner){
     return game.turn + '\'s turn'
+  }else if (game.winner === 'Draw'){
+    return 'DRAW'
+  }else{
+    return game.winner + ' WINS'
   }
 }

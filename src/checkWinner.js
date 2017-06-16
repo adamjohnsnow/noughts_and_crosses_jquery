@@ -9,7 +9,11 @@ function CheckWinner(board, turn){
     [0, 4, 8],
     [2, 4, 6]
   ];
-  return evaluateBoard(board, turn, wins);
+  if (checkForDraw(board) === 0){
+    return 'Draw'
+  }else{
+    return evaluateBoard(board, turn, wins);
+  }
 }
 
 function evaluateBoard(board, turn, wins){
@@ -28,4 +32,13 @@ function selectResults(board, winsSelection){
     board[winsSelection[2]],
   ];
   return boardSelection.toString();
+}
+
+function checkForDraw(board){
+  var count = 0;
+  for(var i = 1; i < 9; ++i){
+    if(board[i] == '')
+    count++;
+  }
+  return count;
 }
